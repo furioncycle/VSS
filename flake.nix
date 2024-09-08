@@ -43,7 +43,8 @@
 
           # TODO add install directory with Makefile gprinstall has -d flag for directory for install
           installPhase = ''
-            make install-libs-static
+            
+            INSTALL_PROJECT_DIR=$out/bin INSTALL_INCLUDE_DIR=$out/bin/include/vss/ INSTALL_EXEC_DIR=$out/bin INSTALL_LIBRARY_DIR=$out/bin INSTALL_ALI_DIR=$out/bin/vss/ make install-libs-static
             
           '';
         };
