@@ -47,7 +47,7 @@
           '';
 
           installPhase = ''           
-             INSTALL_PROJECT_DIR=$out/bin INSTALL_INCLUDE_DIR=$out/bin/include/vss INSTALL_EXEC_DIR=$out/bin INSTALL_LIBRARY_DIR=$out/bin INSTALL_ALI_DIR=$out/bin/vss make install-libs-static
+             PREFIX=$out DESTDIR= make install-libs-static
             
           '';
         };
