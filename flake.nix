@@ -48,7 +48,7 @@
 
           installPhase = ''           
              PREFIX=$out DESTDIR= make install-libs-static
-            
+             ln -s $out/lib/gnat/* $out/share/gpr/            
           '';
         };
     });
